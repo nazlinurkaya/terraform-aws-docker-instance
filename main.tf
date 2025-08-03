@@ -33,7 +33,7 @@ resource "aws_instance" "tf-naz-ec2" {
   instance_type = var.instance_type
   count = var.num_of_instance
   key_name = var.key_name
-  vpc_security_group_ids = [aws_security_group.tf-sec-gr.id]
+  vpc_security_group_ids = [aws_security_group.naz-tf-sec-gr.id]
   user_data = templatefile("${abspath(path.module)}/userdata.sh", {myserver = var.server-name})
   tags = {
     Name = var.tag
