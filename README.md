@@ -15,4 +15,5 @@ provider "aws" {
 module "docker_instance" {
     source = "nazlinurkaya/docker-instance/aws"
     key_name = "clarusway"
+    
 }
